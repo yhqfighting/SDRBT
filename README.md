@@ -4,21 +4,13 @@
 
 
 - `data/`
-  - `input/` 
-    - `drug-atc.csv`, `ndc2atc_level4.csv`, `ndc2rxnorm_mapping.txt`: mapping files for drug code transformation
-    - `idx2ndc.pkl`: It maps ATC-4 code to rxnorm code and then query to drugbank.
-    - `idx2drug.pkl`: Drug ID (we use ATC-4 level code to represent drug ID) to drug SMILES string dictionary
-      
-  - `output/`
-    - `voc_final.pkl`: diag/prod/med index to code dictionary
-    - `ddi_A_final.pkl`: ddi adjacency matrix
-    - `ddi_matrix_H.pkl`: H mask structure (This file is created by ddi_mask_H.py)
-    - `records_final.pkl`: The final diagnosis-procedure-medication EHR records of each patient. Due to policy reasons, we are unable to provide processed data. Users are asked to process it themselves according to the instructions in the next section
-      
-  - `graphs/`
-    - `causal_graph.pkl`: casual graphs in DAG form
-    - `Diag_Med_causal_effect.pkl`,`Proc_Med_casual_effect.pkl`: causal effects between diag/proc and med
-    
+  - `drug-atc.csv`, `ndc2atc_level4.csv`, `ndc2rxnorm_mapping.txt`: mapping files for drug code transformation
+  - `idx2ndc.pkl`: It maps ATC-4 code to rxnorm code and then query to drugbank.
+  - `idx2drug.pkl`: Drug ID (we use ATC-4 level code to represent drug ID) to drug SMILES string dictionary
+  - `voc_final.pkl`: diag/prod/med index to code dictionary
+  - `ddi_A_final.pkl`: ddi adjacency matrix
+  - `ddi_matrix_H.pkl`: H mask structure (This file is created by ddi_mask_H.py)
+  - `records_final.pkl`: The final diagnosis-procedure-medication EHR records of each patient. Due to policy reasons, we are unable to provide processed data. Users are asked to process it themselves according to the instructions in the next section
   - `ddi_mask_H.py`: The python script responsible for generating `ddi_mask_H.pkl` and `substructure_smiles.pkl`.
   - `processing.py`: The python script responsible for generating `voc_final.pkl`, `records_final.pkl`, and `ddi_A_final.pkl`   
 
