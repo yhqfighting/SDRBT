@@ -5,15 +5,15 @@
 
 - `data/`
   - `drug-atc.csv`, `ndc2atc_level4.csv`, `ndc2rxnorm_mapping.txt`: mapping files for drug code transformation.
-  -  RXCUI2atc4.csv: this is a NDC-RXCUI-ATC4 mapping file, and we only need the RXCUI to ATC4 mapping.
-  -  rxnorm2RXCUI.txt: NDC-RXCUI mapping.
-  -  ndc2drug.pkl: ndc2drug mapping file.
-  -  drugbank_drugs_info.csv: drug information table downloaded from drugbank here https://drive.google.com/file/d/1EzIlVeiIR6LFtrBnhzAth4fJt6H_ljxk/view?usp=sharing, which is used to map drug name to drug SMILES string.
-  -  drug-DDI.csv: this a large file, containing the drug DDI information, coded by CID. The file could be downloaded from https://drive.google.com/file/d/1mnPc0O0ztz0fkv3HF-dpmBb8PLWsEoDz/view?usp=sharing.
+  -  `RXCUI2atc4.csv`: this is a NDC-RXCUI-ATC4 mapping file, and we only need the RXCUI to ATC4 mapping.
+  -  `rxnorm2RXCUI.txt`: NDC-RXCUI mapping.
+  -  `ndc2drug.pkl`: ndc2drug mapping file.
+  -  `drugbank_drugs_info.csv`: drug information table downloaded from drugbank here https://drive.google.com/file/d/1EzIlVeiIR6LFtrBnhzAth4fJt6H_ljxk/view?usp=sharing, which is used to map drug name to drug SMILES string.
+  -  `drug-DDI.csv`: this a large file, containing the drug DDI information, coded by CID. The file could be downloaded from https://drive.google.com/file/d/1mnPc0O0ztz0fkv3HF-dpmBb8PLWsEoDz/view?usp=sharing.
   -  We also need to go to https://physionet.org/content/mimiciii/1.4/ to download the MIMIC-III dataset (You may need to get the certificate). The following required data can be downloaded from this website：
-    -  DIAGNOSES_ICD.csv, PROCEDURES_ICD.csv, PRESCRIPTIONS.csv (diagnosis, procedure, prescription information).
-    -  D_ICD_DIAGNOSES.csv, D_ICD_PROCEDURES.csv (dictionary tables for diagnosis and procedure).
-    -  NOTEEVENTS.csv, ADMISSIONS.csv (used for symptom extraction).
+    -  `DIAGNOSES_ICD.csv`, `PROCEDURES_ICD.csv`, `PRESCRIPTIONS.csv` (diagnosis, procedure, prescription information).
+    -  `D_ICD_DIAGNOSES.csv`, `D_ICD_PROCEDURES.csv` (dictionary tables for diagnosis and procedure).
+    -  `NOTEEVENTS.csv`, `ADMISSIONS.csv` (used for symptom extraction).
 
 - `src/` folder contains all the source code.
   - `block_recurrent_transformer/`: Code about block recurrent transformer module.
