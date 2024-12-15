@@ -178,21 +178,10 @@ wrapt                               1.16.0
 x-transformers                      1.30.0
 ```
 
-## 2.2 Data Processing
+## 2.3 Data Processing
 
-1.Since GitHub has a 100MB file size limit, we can only upload a portion of the data. To make reproduction more convenient, we have provided a compressed file containing all the data for download on Google Drive.
 
-https://drive.google.com/file/d/1B_IniWXZvwsN2tjEcLuRm927C8peDFJD/view?usp=sharing
-
-2.Readers can directly use the data we provide or regenerate the data using the code below.
-
-```bash
-python data/processing.py
-python data/ddi_mask_H.py
-python src/Relevance_construction.py
-```
-
-### 2.3 Run the Code
+### 2.4 Run the Code
 
 ```bash
 python src/main.py
