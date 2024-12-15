@@ -4,29 +4,21 @@
 
 
 - `data/`
-  - `drug-atc.csv`, `ndc2atc_level4.csv`, `ndc2rxnorm_mapping.txt`: mapping files for drug code transformation
-  - `idx2ndc.pkl`: It maps ATC-4 code to rxnorm code and then query to drugbank.
-  - `idx2drug.pkl`: Drug ID (we use ATC-4 level code to represent drug ID) to drug SMILES string dictionary
-  - `voc_final.pkl`: diag/prod/med index to code dictionary
-  - `ddi_A_final.pkl`: ddi adjacency matrix
-  - `ddi_matrix_H.pkl`: H mask structure (This file is created by ddi_mask_H.py)
-  - `records_final.pkl`: The final diagnosis-procedure-medication EHR records of each patient. Due to policy reasons, we are unable to provide processed data. Users are asked to process it themselves according to the instructions in the next section
-  - `ddi_mask_H.py`: The python script responsible for generating `ddi_mask_H.pkl` and `substructure_smiles.pkl`.
-  - `processing.py`: The python script responsible for generating `voc_final.pkl`, `records_final.pkl`, and `ddi_A_final.pkl`   
+  - `drug-atc.csv`, `ndc2atc_level4.csv`, `ndc2rxnorm_mapping.txt`: mapping files for drug code transformation.
+  -  RXCUI2atc4.csv: this is a NDC-RXCUI-ATC4 mapping file, and we only need the RXCUI to ATC4 mapping.
+  -  rxnorm2RXCUI.txt: NDC-RXCUI mapping.
+  -  ndc2drug.pkl: ndc2drug mapping file.
+  -  drugbank_drugs_info.csv: drug information table downloaded from drugbank here https://drive.google.com/file/d/1EzIlVeiIR6LFtrBnhzAth4fJt6H_ljxk/view?usp=sharing, which is used to map drug name to drug SMILES string.
+  -  drug-DDI.csv: this a large file, containing the drug DDI information, coded by CID. The file could be downloaded from https://drive.google.com/file/d/1mnPc0O0ztz0fkv3HF-dpmBb8PLWsEoDz/view?usp=sharing.
+  -  We also need to go to https://physionet.org/content/mimiciii/1.4/ to download the MIMIC-III dataset (You may need to get the certificate). The following required data can be downloaded from this website：
+    -  DIAGNOSES_ICD.csv, PROCEDURES_ICD.csv, PRESCRIPTIONS.csv (diagnosis, procedure, prescription information).
+    -  D_ICD_DIAGNOSES.csv, D_ICD_PROCEDURES.csv (dictionary tables for diagnosis and procedure).
+    -  NOTEEVENTS.csv, ADMISSIONS.csv (used for symptom extraction).
 
 - `src/` folder contains all the source code.
-  - `modules/`: Code for model definition.
-  - `util.py`: Code for metric calculations and some data preparation.
-  - `training.py`: Code for the functions used in training and evaluation.
-  - `main.py`: Train or evaluate our Model.
- 
-- `saved/` 
-  - `trained_model`:  test example, a model we have trained. Users can directly check using the test mode
-  - `parameter_report.txt`: Log file containing all parameters
-  
-**Note1:** `data/` only contains part of the data. See the [Data processing] section for more details.
-
-**Note2:** Due to some relatively complex environment dependencies during the causal graph generation phase, for the convenience of users in studying or validating our work, we have submitted a file named `causal_construction_easyuse.py`. This file can be used in conjunction with the already generated causal graphs, replacing the `causal_construction.py` file. While this method is more convenient, we strongly recommend researchers to retrain the causal graphs to ensure rigor.
+  - `block_recurrent_transformer/`: Code about block recurrent transformer module.
+  - `saved/`：The model and experimental results generated during the training were recorded.
+  - In order to facilitate readers to read and understand our model and reproduce our experimental results, we are summarizing the code and adding annotations, and the specific content will be updated in the near future.
 
 ## 2. Operation
 
