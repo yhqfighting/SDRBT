@@ -18,7 +18,8 @@
 - `src/` folder contains all the source code.
   - `block_recurrent_transformer/`: Code about block recurrent transformer module.
   - `saved/`：The model and experimental results generated during the training were recorded.
-  - In order to facilitate readers to read and understand our model and reproduce our experimental results, we are summarizing the code and adding annotations, and the specific content will be updated in the near future.
+    
+**Note:** In order to facilitate readers to read and understand our model and reproduce our experimental results, we are summarizing the code and adding annotations, and the specific content will be updated in the near future.
 
 ## 2. Operation
 
