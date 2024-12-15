@@ -172,8 +172,8 @@ x-transformers                      1.30.0
 ```
 
 ### 2.3 Data Processing
-- change the path in processing.py and processing the data to get a complete records_final.pkl.
-- run ddi_mask_H.py to get the ddi_mask_H.pkl.
+- Change the path in processing.py and processing the data to get a complete records_final.pkl.
+- Run ddi_mask_H.py to get the ddi_mask_H.pkl.
 
 ### 2.4 Run the Code
 
