@@ -180,10 +180,12 @@ x-transformers                      1.30.0
 ```bash
 python src/main.py
 ```
+## 3. Contact
+Please contact xinglinlin@sdut.edu.cn for help or submit an issue.
 
-## 3. Citation & Acknowledgement
+## 4. Citation & Acknowledgement
 We are grateful to everyone who contributed to this project.
 
 If the code and the paper are useful for you, it is appreciable to cite our paper.
 
-Please contact xinglinlin@sdut.edu.cn for help or submit an issue.
+
