@@ -23,7 +23,7 @@
 
 ## 2. Operation
 
-## 2.1 Experimental Environment 
+### 2.1 Experimental Environment 
 
 The experimental environment used in this study is as follows:
 
@@ -34,7 +34,7 @@ GPU requirements: 24GB NVIDIA RTX4090 GPU.
 Environment dependencies: PyTorch 2.0.0 and CUDA 11.8.
 ```
         
-## 2.2 Package Dependency
+### 2.2 Package Dependency
 
 Please install the environment according to the following version
 
@@ -171,7 +171,7 @@ wrapt                               1.16.0
 x-transformers                      1.30.0
 ```
 
-## 2.3 Data Processing
+### 2.3 Data Processing
 
 
 ### 2.4 Run the Code
