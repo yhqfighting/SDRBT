@@ -185,3 +185,5 @@ python src/main.py
 We are grateful to everyone who contributed to this project.
 
 If the code and the paper are useful for you, it is appreciable to cite our paper.
+
+Please contact xinglinlin@sdut.edu.cn for help or submit an issue.
